@@ -1,0 +1,8 @@
+﻿<p class="my-2 text-base leading-relaxed tracking-normal">
+    @ChildContent
+</p>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

@@ -1,25 +1,14 @@
 ﻿@inherits LayoutComponentBase
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <link href="/app.css" rel="stylesheet">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Chris Phu</title>
-    </head>
-
-    <body>
-        <div>
-            <Header />
-            <Nav />
-            <hr>
-            <main>
-                <article>
-                    @Body
-                </article>
-            </main>
-            <Footer />
-        </div>
-    </body>
-</html>
+<div class="flex justify-center text-slate-950 w-full p-0 sm:p-2">
+    <div class="p-6 sm:p-8 bg-slate-50 sm:rounded-lg">
+        <Header></Header>
+        <Nav></Nav>
+        <main>
+            <article>
+                @Body
+            </article>
+        </main>
+        <Footer></Footer>
+    </div>
+</div>

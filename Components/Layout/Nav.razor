@@ -1,5 +1,7 @@
-﻿<nav>
-    <a href="/">Home</a>
-    <span class="no-user-select">&ensp;/&ensp;</span>
-    <a href="/pages/misc/about">About</a>
+﻿@using BlazorPersonalWebsite.Components.Modules
+
+<nav class="my-1 text-base tracking-normal">
+    <StandardLink LinkText="Home" URL="/" NoUnderline="true" />
+    <span class="select-none">&ensp;/&ensp;</span>
+    <StandardLink LinkText="About" URL="/about" NoUnderline="true" />
 </nav>

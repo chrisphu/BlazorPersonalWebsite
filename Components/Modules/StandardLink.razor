@@ -1,0 +1,16 @@
+<span class="inline-block hover:-translate-y-0.5 transition-transform ease-in-out duration-100">
+    <a href=@(URL) class="@(NoUnderline ? "no-underline" : "")">
+        @(LinkText)
+    </a>
+</span>
+
+@code {
+    [Parameter]
+    public string LinkText { get; set; } = string.Empty;
+
+    [Parameter]
+    public string URL { get; set; } = string.Empty;
+
+    [Parameter]
+    public bool NoUnderline { get; set; } = false;
+}

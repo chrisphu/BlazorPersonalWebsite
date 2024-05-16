@@ -1,0 +1,19 @@
+﻿<span class="rounded px-1.5 py-0.5 text-sm font-bold @(BackgroundColor)">
+    <span class="select-none @(BackgroundColorToTextColor(BackgroundColor))">
+        @ChildContent
+    </span>
+</span>
+
+@code {
+    [Parameter]
+    public string BackgroundColor { get; set; } = "bg-slate-950";
+    
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    private string BackgroundColorToTextColor(string color)
+    {
+        string[] colorParts = color.Split('-');
+        return "text-" + colorParts[1] + "-100";
+    }
+}

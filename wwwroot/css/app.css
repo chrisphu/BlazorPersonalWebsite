@@ -1,0 +1,35 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        src: url('/fonts/Inter-VariableFont.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'JetBrainsMono';
+        font-style: normal;
+        src: url('/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+/*
+    ::selection {
+        background-color: #4c0519;
+    }
+*/
+
+    html {
+        font-family: 'Inter', sans-serif;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}

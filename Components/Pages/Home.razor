@@ -1,26 +1,43 @@
 ﻿@page "/"
+@using BlazorPersonalWebsite.Components.Modules
 
 <PageTitle>Home</PageTitle>
 
-<h1>Home</h1>
+<StandardHeading1>
+	Home
+</StandardHeading1>
 
-<p class="subtle">Last updated 2024 April 14</p>
+<Caption>
+	Last updated 2024 April 14
+</Caption>
 
-<p>Welcome to my website! I document and write about my projects and interests here from time to time. This website itself is actually a project as it is a simple <a href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor">Blazor web app</a> hosted on <a href="https://pages.github.com">GitHub Pages</a>.</p>
+<StandardParagraph>
+	Welcome to my website! I document and write about my projects and interests here from time to time. This website itself is actually a project as it is a <StandardLink LinkText="Blazor web app" URL="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor" /> using <StandardLink LinkText="Tailwind CSS" URL="https://tailwindcss.com" /> and is being hosted on <StandardLink LinkText="GitHub Pages" URL="https://pages.github.com" />.
+</StandardParagraph>
 
-<p>The dates next to the links below are roughly when I completed (or shelved) the respective topic.</p>
+<StandardParagraph>
+	The dates next to the links below are roughly when I completed (or shelved) the respective topic.
+</StandardParagraph>
 
-<h2>Projects</h2>
+<StandardHeading2>
+	Projects
+</StandardHeading2>
 
-<ul>
-	<li><a href="https://github.com/chrisphu/chrisphu.github.io">Website</a> <BlazorPersonalWebsite.Components.Layout.Label /> – Ongoing</li>
-	<li><a href="https://github.com/chrisphu/basic-filename-linter">Basic filename linter</a> <BlazorPersonalWebsite.Components.Layout.Label /> – November 2023</li>
-	<li><a href="https://www.printables.com/model/276528-modern-chess-pieces">Modern chess pieces</a> <BlazorPersonalWebsite.Components.Layout.Label /> – January 2021</li>
-</ul>
+<StandardParagraph>
+	The dates next to the links below are roughly when I completed (or shelved) the respective topic.
+</StandardParagraph>
 
-<h2>Fun</h2>
+<StandardUnorderedList>
+	<li><StandardLink LinkText="Website" URL="https://github.com/chrisphu/chrisphu.github.io" /> <Label BackgroundColor="bg-blue-500">Test</Label> – Ongoing</li>
+	<li><StandardLink LinkText="Basic filename linter" URL="https://github.com/chrisphu/basic-filename-linter" /> <Label>Test</Label> <Label>Test</Label> – November 2023</li>
+	<li><StandardLink LinkText="Modern chess pieces" URL="https://www.printables.com/model/276528-modern-chess-pieces" /> <Label>Test</Label> <Label>Test</Label> – January 2021</li>
+</StandardUnorderedList>
 
-<ul>
-	<li><a href="/pages/stuff/puzzmo">Puzzmo</a> <BlazorPersonalWebsite.Components.Layout.Label /> – Ongoing</li>
-	<li><a href="/pages/stuff/20th-century-food-court-completed">20th Century Food Court completed!</a> <BlazorPersonalWebsite.Components.Layout.Label /> – October 2023</li>
-</ul>
+<StandardHeading2>
+	MISC
+</StandardHeading2>
+
+<StandardUnorderedList>
+	<li><StandardLink LinkText="Puzzmo" URL="/" /> <Label>Test</Label> – Ongoing</li>
+	<li><StandardLink LinkText="20th Century Food Court completed!" URL="/" /> <Label>Test</Label> – October 2023</li>
+</StandardUnorderedList>

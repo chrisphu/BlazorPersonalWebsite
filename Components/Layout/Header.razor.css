@@ -1,14 +1,4 @@
-﻿header > h1 {
-    margin-bottom: 0.5em;
-}
-
-header > h1 > a {
-    font-size: 1.33em;
-    color: #e67e80;
-    text-decoration: none;
-}
-
-@keyframes accent-animation {
+﻿@keyframes accent-animation {
     0% {
         transform: rotate(10deg);
     }
@@ -22,11 +12,8 @@ header > h1 > a {
     }
 }
 
-#website-title-accent {
-    /* Display & box model */
-    display: inline-block;
-
-    /* Animation */
+span {
+    /*Animation*/ 
     animation-name: accent-animation;
     animation-duration: 5s;
     animation-iteration-count: infinite;

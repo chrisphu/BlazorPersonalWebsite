@@ -1,0 +1,8 @@
+﻿<ul class="my-1 list-inside list-disc text-base leading-relaxed tracking-normal">
+    @ChildContent
+</ul>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

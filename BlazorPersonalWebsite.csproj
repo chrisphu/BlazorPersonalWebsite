@@ -7,8 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="tailwind.config.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\fonts\Inter-VariableFont.ttf" />
     <None Include="wwwroot\fonts\JetBrainsMono-VariableFont_wght.ttf" />
+    <None Include="wwwroot\postcss.config.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\githubgist.js" />
   </ItemGroup>
 
 </Project>
