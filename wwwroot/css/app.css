@@ -19,17 +19,11 @@
         display: none;
     }
 
-/*
-    ::selection {
-        background-color: #4c0519;
-    }
-*/
+/*    ::selection {
+        background-color: yellow;
+    }*/
 
     html {
         font-family: 'Inter', sans-serif;
-    }
-
-    a {
-        text-decoration: underline;
     }
 }
