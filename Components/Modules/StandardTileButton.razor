@@ -1,0 +1,19 @@
+<a href=@(Url) class="p-4 rounded-lg bg-slate-100 text-left hover:z-10 hover:scale-105 ring-blue-500 hover:ring-2 shadow hover:shadow-md transition-all ease-in-out duration-75">
+    <p class="mb-2 font-bold">
+        @(Title)
+    </p>
+    <p class="text-sm">
+        @(Body)
+    </p>
+</a>
+
+@code {
+    [Parameter]
+    public string Title { get; set; } = string.Empty;
+    
+    [Parameter]
+    public string Body { get; set; } = string.Empty;
+    
+    [Parameter]
+    public string Url { get; set; } = "/";
+}

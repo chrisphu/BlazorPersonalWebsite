@@ -8,7 +8,7 @@ module.exports = {
             keyframes: {
                 'sliding-background': {
                     '0%': { backgroundPosition: '0 0' },
-                    '100%': { backgroundPosition: '-4rem 4rem' },
+                    '100%': { backgroundPosition: '-3rem 3rem' },
                 },
             },
             animation: {
@@ -20,7 +20,7 @@ module.exports = {
         {
             // https://tailwindcss.com/docs/content-configuration#safelisting-classes
             pattern: /(bg|text)-(red|green|blue|yellow|slate|indigo)-(100|200|300|400|500|600|700|800|900)/,
-            variants: ['hover', 'active'],
+            variants: ['from', 'via', 'to', 'hover', 'active'],
         },
     ],
 }
