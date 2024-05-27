@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorPersonalWebsiteWasm", "BlazorPersonalWebsiteWasm.csproj", "{957ABE3B-BD48-4596-AD8C-DB22383BDC40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorPersonalWebsite", "BlazorPersonalWebsite.csproj", "{957ABE3B-BD48-4596-AD8C-DB22383BDC40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
