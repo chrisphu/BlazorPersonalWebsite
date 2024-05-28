@@ -1,26 +1,23 @@
 <a href=@(Url) class="p-4 rounded-lg bg-slate-100 text-left hover:z-10 hover:scale-105 ring-blue-500 hover:ring-2 shadow hover:shadow-md transition-all ease-in-out duration-75">
-    <img src="@(ImagePath)" alt="@(AltText)" class="inline-block w-5" />
-    <p class="inline font-bold">
-        @(Title)
-    </p>
-    <p class="mt-2 text-sm">
+    <div class="flex flex-nowrap gap-1 mb-2 font-bold">
+        <img src="@(Image)" alt="@(AltText)" class="h-5 mr-0.5 self-center" />
+        <p class="self-center">
+            @(Title)
+        </p>
+    </div>
+    <p class="mb-2 text-sm">
         @(Body)
     </p>
+    <div class="flex flex-nowrap gap-1 justify-end">
+        @(ChildContent)
+    </div>
 </a>
 
 @code {
-    [Parameter]
-    public string ImagePath { get; set; } = string.Empty;
-    
-    [Parameter]
-    public string AltText { get; set; } = string.Empty;
-    
-    [Parameter]
-    public string Title { get; set; } = string.Empty;
-    
-    [Parameter]
-    public string Body { get; set; } = string.Empty;
-    
-    [Parameter]
-    public string Url { get; set; } = "/";
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public string Image { get; set; } = string.Empty;
+    [Parameter] public string AltText { get; set; } = string.Empty;
+    [Parameter] public string Title { get; set; } = string.Empty;
+    [Parameter] public string Body { get; set; } = string.Empty;
+    [Parameter] public string Url { get; set; } = "/";
 }

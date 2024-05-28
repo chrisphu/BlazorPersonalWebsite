@@ -1,0 +1,8 @@
+﻿<div class="rounded-full px-2.5 py-0.5 mt-0.5 text-xs font-semibold bg-@(Color)-200 text-@(Color)-500">
+    @(Content)
+</div>
+
+@code {
+    [Parameter] public string Color { get; set; } = "slate";
+    [Parameter] public string Content { get; set; } = string.Empty;
+}

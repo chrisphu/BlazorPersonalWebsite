@@ -7,7 +7,7 @@
 </StandardHeading1>
 
 <Caption>
-    Last updated 2024 May 24
+    Last updated 2024 May 27
 </Caption>
 
 <StandardParagraph>
@@ -20,8 +20,8 @@
 
 <StandardParagraph>
     <StandardTileButtonGrid>
-        <StandardTileButton TitlePrefix="🙋‍♂️" Title="About me page" Body="All about who I am!" Url="/about" />
-        <StandardTileButton TitlePrefix="📄️" Title="Resume" Body="Career credentials and details." Url="/about" />
+        <StandardTileButton TitlePrefix="🙋‍♂️" Title="About me page" Body="All about who I am!" Url="/about-me" />
+        <StandardTileButton TitlePrefix="📄️" Title="Resume" Body="Career credentials and details." Url="/" />
     </StandardTileButtonGrid>
 </StandardParagraph>
 
@@ -31,9 +31,21 @@
 
 <StandardParagraph>
     <StandardTileButtonGrid>
-        <StandardTileButton TitlePrefix="🖥️" Title="Website" Body="The public GitHub repo for this Blazor website." Url="https://github.com/chrisphu/chrisphu.github.io" />
-        <StandardTileButton TitlePrefix="♟️" Title="Modern chess pieces" Body="3D models for my low poly modern chess pieces." Url="https://www.printables.com/model/276528-modern-chess-pieces" />
-        <StandardTileButton TitlePrefix="📂" Title="Basic filename linter" Body="A simple .py script for linting directories." Url="https://github.com/chrisphu/basic-filename-linter" />
+        <StandardTileButton TitlePrefix="🖥️" Title="Website" Body="Public repo for this Blazor website." Url="https://github.com/chrisphu/chrisphu.github.io">
+            <TileButtonLabel Content="github.com"></TileButtonLabel>
+            <TileButtonLabel Color="violet" Content="code"></TileButtonLabel>
+        </StandardTileButton>
+        
+        <StandardTileButton TitlePrefix="♟️" Title="Modern chess pieces" Body="3D models of low poly chess pieces." Url="https://www.printables.com/model/276528-modern-chess-pieces">
+            <TileButtonLabel Content="printables.com"></TileButtonLabel>
+            <TileButtonLabel Color="blue" Content="design"></TileButtonLabel>
+        </StandardTileButton>
+        
+        <StandardTileButton TitlePrefix="📂" Title="Basic filename linter" Body="Simple .py script for linting filenames." Url="https://github.com/chrisphu/basic-filename-linter">
+            <TileButtonLabel Content="github.com"></TileButtonLabel>
+            <TileButtonLabel Color="violet" Content="code"></TileButtonLabel>
+        </StandardTileButton>
+        
         <SubtleTileButton TitlePrefix="📦" Title="See more" Body="More things right this way!" Url="/" />
     </StandardTileButtonGrid>
 </StandardParagraph>
@@ -43,6 +55,11 @@
 </StandardHeading2>
 
 <StandardTileButtonGrid>
-    <CustomImageTileButton ImagePath="/images/puzzmo-logo-no-text.png" AltText="Part of logo from https://www.puzzmo.com/press" Title="Puzzmo" Body="A fun collection of daily puzzles I've been into." Url="https://www.puzzmo.com/user/hi/chris" />
-    <CustomImageTileButton ImagePath="/images/20th-century-food-court-part-of-sign.png" AltText="Part of opening screen sign"  Title="20th Century Food Court final level" Body="My solution for the final level in this incredible minigame." Url="/" />
+    <CustomImageTileButton Image="/images/puzzmo-logo-no-text.png" AltText="Part of Puzzmo logo." Title="Puzzmo" Body="Fun daily puzzles." Url="https://www.puzzmo.com/user/hi/chris">
+        <TileButtonLabel Content="puzzmo.com"></TileButtonLabel>
+    </CustomImageTileButton>
+    
+    <CustomImageTileButton Image="/images/20th-century-food-court-part-of-sign.png" AltText="Part of opening screen in 20th Century Food Court." Title="Finished 20th Century Food Court!" Body="See my solution for the final level." Url="/">
+        <TileButtonLabel Color="red" Content="spoilers!"></TileButtonLabel>
+    </CustomImageTileButton>
 </StandardTileButtonGrid>

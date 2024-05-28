@@ -5,12 +5,7 @@
 </span>
 
 @code {
-    [Parameter]
-    public string LinkText { get; set; } = string.Empty;
-
-    [Parameter]
-    public string URL { get; set; } = string.Empty;
-
-    [Parameter]
-    public bool NoUnderline { get; set; } = false;
+    [Parameter] public string LinkText { get; set; } = string.Empty;
+    [Parameter] public string URL { get; set; } = string.Empty;
+    [Parameter] public bool NoUnderline { get; set; }
 }

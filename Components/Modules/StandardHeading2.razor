@@ -1,8 +1,7 @@
 ﻿<h2 class="mb-1 mt-6 text-xl font-bold leading-loose tracking-wide">
-    @ChildContent
+    @(ChildContent)
 </h2>
 
 @code {
-    [Parameter]
-    public RenderFragment? ChildContent { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
 }

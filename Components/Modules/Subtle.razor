@@ -1,8 +1,7 @@
 ﻿<span class="text-sm italic leading-relaxed tracking-normal">
-    @ChildContent
+    @(ChildContent)
 </span>
 
 @code {
-    [Parameter]
-    public RenderFragment? ChildContent { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
 }

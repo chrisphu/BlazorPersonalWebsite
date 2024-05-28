@@ -1,10 +1,9 @@
 <p class="mb-4 -mt-2">
     <Subtle>
-        @ChildContent
+        @(ChildContent)
     </Subtle>
 </p>
 
 @code {
-    [Parameter]
-    public RenderFragment? ChildContent { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
 }
