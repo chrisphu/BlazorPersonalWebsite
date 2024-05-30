@@ -1,5 +1,5 @@
-<a href=@(Url) class="p-4 rounded-lg bg-slate-100 text-left hover:z-10 hover:scale-105 ring-blue-500 hover:ring-2 shadow hover:shadow-md transition-all ease-in-out duration-75">
-    <div class="flex flex-nowrap gap-1 mb-2 font-bold">
+<a href=@(Url) class="rounded-lg bg-slate-100 p-4 text-left shadow ring-blue-500 transition-all duration-75 ease-in-out hover:z-10 hover:scale-105 hover:shadow-md hover:ring-2">
+    <div class="mb-2 flex flex-nowrap gap-1 font-bold">
         <p class="self-center">
             @(TitlePrefix)
         </p>
@@ -10,7 +10,7 @@
     <p class="mb-2 text-sm">
         @(Body)
     </p>
-    <div class="flex flex-nowrap gap-1 justify-end">
+    <div class="flex flex-nowrap justify-end gap-1">
         @(ChildContent)
     </div>
 </a>
