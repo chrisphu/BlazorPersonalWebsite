@@ -1,0 +1,23 @@
+<a href=@(Url) class="rounded-lg border-2 border-dashed border-slate-300 bg-slate-50 p-4 text-left text-slate-400 transition-all duration-75 ease-in-out hover:bg-slate-100 hover:text-black">
+    <div class="mb-2 flex flex-nowrap gap-1 font-bold">
+        <img src="@(Image)" alt="@(AltText)" class="h-5 self-center mr-0.5" />
+        <p class="self-center">
+            @(Title)
+        </p>
+    </div>
+    <p class="mb-2 text-sm">
+        @(Body)
+    </p>
+    <div class="flex flex-nowrap justify-end gap-1">
+        @(ChildContent)
+    </div>
+</a>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public string Image { get; set; } = string.Empty;
+    [Parameter] public string AltText { get; set; } = string.Empty;
+    [Parameter] public string Title { get; set; } = string.Empty;
+    [Parameter] public string Body { get; set; } = string.Empty;
+    [Parameter] public string Url { get; set; } = "/";
+}

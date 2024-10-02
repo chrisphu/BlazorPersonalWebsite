@@ -18,23 +18,41 @@
     I have awful online presence. But I'm trying to get better!
 </StandardParagraph>
 
+<Spacer />
+
 <StandardParagraph>
     <StandardTileButtonGrid>
-        <CustomImageTileButton Image="/images/github-mark.svg" AltText="GitHub Invertocat mark." Title="GitHub" Body="My coding projects." Url="https://github.com/chrisphu">
-            <TileButtonLabel Content="github.com"></TileButtonLabel>
-        </CustomImageTileButton>
+        <CustomImageStandardTileButton Image="/images/github-mark.svg"
+                                       AltText="GitHub Invertocat mark."
+                                       Title="GitHub"
+                                       Body="My projects and scripts."
+                                       Url="https://github.com/chrisphu">
+            <TileButtonLabel Content="github.com" />
+        </CustomImageStandardTileButton>
         
-        <CustomImageTileButton Image="/images/printables-logo-no-text.png" AltText="Part of Printables logo." Title="Printables" Body="My models for 3D printing." Url=@("https://www.printables.com/@Chris_367665")>
-            <TileButtonLabel Content="printables.com"></TileButtonLabel>
-        </CustomImageTileButton>
+        <CustomImageStandardTileButton Image="/images/printables-logo-no-text.png"
+                                       AltText="Part of Printables logo."
+                                       Title="Printables"
+                                       Body="My models for 3D printing."
+                                       Url=@("https://www.printables.com/@Chris_367665")>
+            <TileButtonLabel Content="printables.com" />
+        </CustomImageStandardTileButton>
         
-        <CustomImageTileButton Image="/images/instructables-robot.png" AltText="Instructables robot." Title="Instructables" Body="My building projects and plans." Url="https://www.instructables.com/member/chrisphu">
-            <TileButtonLabel Content="instructables.com"></TileButtonLabel>
-        </CustomImageTileButton>
+        <CustomImageStandardTileButton Image="/images/linkedin-in-blue-mark.png"
+                                       AltText="Blue 'in' LinkedIn mark."
+                                       Title="LinkedIn"
+                                       Body="Career details."
+                                       Url="https://www.linkedin.com/in/chrisnguyenphu">
+            <TileButtonLabel Content="linkedin.com" />
+        </CustomImageStandardTileButton>
         
-        <CustomImageTileButton Image="/images/linkedin-in-blue-mark.png" AltText="Blue 'in' LinkedIn mark." Title="LinkedIn" Body="Details about my career." Url="https://www.linkedin.com/in/chrisnguyenphu">
-            <TileButtonLabel Content="linkedin.com"></TileButtonLabel>
-        </CustomImageTileButton>
+        <CustomImageSubtleTileButton Image="/images/instructables-robot.png"
+                                     AltText="Instructables robot."
+                                     Title="Instructables"
+                                     Body="Work in progress!"
+                                     Url="/about-me">
+            <TileButtonLabel Content="instructables.com" />
+        </CustomImageSubtleTileButton>
     </StandardTileButtonGrid>
 </StandardParagraph>
 
@@ -43,5 +61,43 @@
 </StandardHeading2>
 
 <StandardParagraph>
-    WIP
+    The following free resources helped immensely with making this website!
 </StandardParagraph>
+
+<ul class="list-disc list-inside">
+    <li>
+        <StandardLink LinkText="Blazor"
+                      URL="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor" />
+        – Web framework.
+        <StandardLink LinkText="MIT License"
+                      URL="https://github.com/dotnet/aspnetcore/blob/main/LICENSE.txt" />.
+    </li>
+    <li>
+        <StandardLink LinkText="GitHub Pages"
+                      URL="https://pages.github.com" />
+        – Static web hosting service.
+        <StandardLink LinkText="About"
+                      URL="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages" />.
+    </li>
+    <li>
+        <StandardLink LinkText="Tailwind CSS"
+                      URL="https://tailwindcss.com" />
+        – CSS framework.
+        <StandardLink LinkText="MIT License"
+                      URL="https://github.com/tailwindlabs/tailwindcss/blob/next/LICENSE" />.
+    </li>
+    <li>
+        <StandardLink LinkText="Inter"
+                      URL="https://fonts.google.com/specimen/Inter" />
+        – Sans serif font.
+        <StandardLink LinkText="Open Font License"
+                      URL="https://fonts.google.com/specimen/Inter/about" />.
+    </li>
+    <li>
+        <StandardLink LinkText="JetBrains Mono"
+                      URL="https://www.jetbrains.com/lp/mono" />
+        – Sans serif monospace font.
+        <StandardLink LinkText="Open Font License"
+                      URL="https://www.jetbrains.com/lp/mono/#license" />.
+    </li>
+</ul>
