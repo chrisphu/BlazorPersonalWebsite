@@ -1,0 +1,7 @@
+<div class="rounded-lg bg-slate-100 px-4 py-2 text-left shadow">
+    @(ChildContent)
+</div>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+}
