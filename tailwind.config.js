@@ -17,11 +17,11 @@ module.exports = {
       keyframes: {
         'sliding-background': {
           '0%': { backgroundPosition: '0 0' },
-          '100%': { backgroundPosition: '-3rem 3rem' },
+          '100%': { backgroundPosition: '-4rem 4rem' },
         },
       },
       animation: {
-        'sliding-background': 'sliding-background 10s linear infinite',
+        'sliding-background': 'sliding-background 8s linear infinite',
       },
     },
   },

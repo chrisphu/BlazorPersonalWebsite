@@ -5547,12 +5547,12 @@ html {
     }
 
     100% {
-      background-position: -3rem 3rem;
+      background-position: -4rem 4rem;
     }
   }
 
   .sm\:animate-sliding-background {
-    animation: sliding-background 10s linear infinite;
+    animation: sliding-background 8s linear infinite;
   }
 
   .sm\:grid-cols-2 {
@@ -5574,6 +5574,10 @@ html {
 
   .sm\:bg-\[length\:3rem\] {
     background-size: 3rem;
+  }
+
+  .sm\:bg-\[length\:4rem\] {
+    background-size: 4rem;
   }
 
   .sm\:p-4 {
