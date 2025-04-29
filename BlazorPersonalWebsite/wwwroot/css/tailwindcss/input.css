@@ -22,15 +22,15 @@ Safelisting https://tailwindcss.com/blog/tailwindcss-v4#css-first-configuration
 
 /* Fonts */
 @font-face {
-    font-family: 'Inter';
+    font-family: Inter;
     font-style: normal;
-    src: url('fonts/Inter-VariableFont.ttf') format('truetype');
+    src: url("fonts/Inter-VariableFont.ttf") format('truetype');
 }
 
 @font-face {
-    font-family: 'JetBrainsMono';
+    font-family: JetBrainsMono;
     font-style: normal;
-    src: url('fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+    src: url("fonts/JetBrainsMono-VariableFont_wght.ttf") format('truetype');
 }
 
 @theme {
@@ -38,9 +38,9 @@ Safelisting https://tailwindcss.com/blog/tailwindcss-v4#css-first-configuration
     --background-color: var(--color-slate-200);
     
     /* Text */
-    --font-sans: 'Inter', ui-sans-serif;
-    --font-serif: ui-serif;
-    --font-mono: 'JetBrainsMono', ui-sans-serif;
+    --font-sans: Inter, sans-serif;
+    --font-serif: serif;
+    --font-mono: JetBrainsMono, monospace;
     
     /* Animations */
     --animate-sliding-background: sliding-background 8s linear infinite;
