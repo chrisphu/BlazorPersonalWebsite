@@ -7,7 +7,7 @@
 </StandardHeading1>
 
 <Caption>
-    Last updated 19 November 2024
+    Last updated 28 April 2025
 </Caption>
 
 <StandardParagraph>
@@ -19,16 +19,16 @@
 </StandardHeading2>
 
 <StandardParagraph>
-    <StandardTileButtonGrid>
-        <StandardTileButton TitlePrefix="🙋‍♂️"
-                            Title="About me"
-                            Body="All about who I am!"
-                            Url="/about-me" />
+    <StandardTileGrid>
+        <StandardTile TitlePrefix="🙋‍♂️"
+                      Title="About"
+                      Body="About me and this website!"
+                      Url="/about" />
         <SubtleTileButton TitlePrefix="📄️"
                           Title="Resume"
                           Body="Work in progress!"
                           Url="/" />
-    </StandardTileButtonGrid>
+    </StandardTileGrid>
 </StandardParagraph>
 
 <StandardHeading2>
@@ -36,51 +36,71 @@
 </StandardHeading2>
 
 <StandardParagraph>
-    <StandardTileButtonGrid>
-        <StandardTileButton TitlePrefix="🖥️"
-                            Title="Website"
-                            Body="Public repo for this Blazor website."
-                            Url="https://github.com/chrisphu/BlazorPersonalWebsite">
+    <StandardTileGrid>
+        <StandardTile TitlePrefix="🖥️"
+                      Title="Website"
+                      Body="Public repo for this Blazor website."
+                      Url="https://github.com/chrisphu/BlazorPersonalWebsite">
             <TileButtonLabel Content="github.com" />
             <TileButtonLabel Color="violet"
                              Content="code" />
-        </StandardTileButton>
+        </StandardTile>
+
+        <StandardTile TitlePrefix="📸"
+                      Title="Photography"
+                      Body="My favorite photos I've taken."
+                      Url="/photography">
+            <TileButtonLabel Color="orange"
+                             Content="art" />
+        </StandardTile>
         
-        <StandardTileButton TitlePrefix="♟️"
-                            Title="Modern chess pieces"
-                            Body="3D models of low poly chess pieces."
-                            Url="https://www.printables.com/model/276528-modern-chess-pieces">
+        <StandardTile TitlePrefix="♟️"
+                      Title="Modern chess pieces"
+                      Body="3D models of low poly chess pieces."
+                      Url="https://www.printables.com/model/276528-modern-chess-pieces">
             <TileButtonLabel Content="printables.com" />
             <TileButtonLabel Color="blue"
                              Content="design" />
-        </StandardTileButton>
+        </StandardTile>
         
-        <StandardTileButton TitlePrefix="📂"
-                            Title="Basic filename linter"
-                            Body="Simple .py script for linting filenames."
-                            Url="https://github.com/chrisphu/basic-filename-linter">
+        <StandardTile TitlePrefix="📂"
+                      Title="kebab-case renamer"
+                      Body="Rename files/directories to kebab-case."
+                      Url="https://github.com/chrisphu/kebab-case-renamer">
             <TileButtonLabel Content="github.com" />
             <TileButtonLabel Color="violet"
                              Content="code" />
-        </StandardTileButton>
+        </StandardTile>
         
         <SubtleTileButton TitlePrefix="📦"
                           Title="Full list"
                           Body="Work in progress!"
                           Url="/" />
-    </StandardTileButtonGrid>
+    </StandardTileGrid>
 </StandardParagraph>
 
 <StandardHeading2>
     Fun stuff
 </StandardHeading2>
 
-<StandardTileButtonGrid>
-    <CustomImageStandardTileButton Image="/images/puzzmo-logo-no-text.png"
+<StandardTileGrid>
+    <CustomImageTileButton Image="/images/puzzmo-logo-no-text.png"
                                    AltText="Part of Puzzmo logo."
                                    Title="Puzzmo stats"
                                    Body="Mostly crosswording!"
                                    Url="https://www.puzzmo.com/user/hi/chris">
-        <TileButtonLabel Content="puzzmo.com" />
-    </CustomImageStandardTileButton>
-</StandardTileButtonGrid>
+        <TileButtonLabel Content="puzzmo.com"/>
+        <TileButtonLabel Color="yellow"
+                         Content="fun!" />
+    </CustomImageTileButton>
+
+    <CustomImageTileButton Image="/images/jingle-rs-favicon.png"
+                                   AltText="Jingle RS favicon."
+                                   Title="Jingle RS"
+                                   Body="My absolute favorite -dle."
+                                   Url="https://jingle.rs">
+        <TileButtonLabel Content="jingle.rs"/>
+        <TileButtonLabel Color="yellow"
+                         Content="fun!" />
+    </CustomImageTileButton>
+</StandardTileGrid>
