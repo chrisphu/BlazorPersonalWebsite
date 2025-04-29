@@ -15,13 +15,34 @@ TODO: Read more at https://tailwindcss.com/blog/tailwindcss-v4#css-first-configu
 
 /*
 Safelisting https://tailwindcss.com/blog/tailwindcss-v4#css-first-configuration
-Make sure PostCSS plugin is installed https://plugins.jetbrains.com/plugin/8578-postcss
 */
 @source inline("bg-{slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,cyan,sky,blue,indigo,violet,purple,fuchsia,pink,rose}-200");
 @source inline("text-{slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,cyan,sky,blue,indigo,violet,purple,fuchsia,pink,rose}-500");
 @source inline("my-{0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,7,8,9,10}");
 
+/* Fonts */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    src: url('fonts/Inter-VariableFont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    font-style: normal;
+    src: url('fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+}
+
 @theme {
+    /* Appearance */
+    --background-color: var(--color-slate-200);
+    
+    /* Text */
+    --font-sans: 'Inter', ui-sans-serif;
+    --font-serif: ui-serif;
+    --font-mono: 'JetBrainsMono', ui-sans-serif;
+    
+    /* Animations */
     --animate-sliding-background: sliding-background 8s linear infinite;
     --animate-header-accent: header-accent 5s ease-in-out infinite;
     --animate-banner-icon: banner-icon 4s ease-in-out infinite;
@@ -47,23 +68,7 @@ Make sure PostCSS plugin is installed https://plugins.jetbrains.com/plugin/8578-
 }
 
 @layer base {
-    @font-face {
-        font-family: 'Inter';
-        font-style: normal;
-        src: url('fonts/Inter-VariableFont.ttf') format('truetype');
-    }
-    
-    @font-face {
-        font-family: 'JetBrainsMono';
-        font-style: normal;
-        src: url('fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
-    }
-    
     ::-webkit-scrollbar {
         display: none;
-    }
-    
-    html {
-        font-family: 'Inter', sans-serif;
     }
 }

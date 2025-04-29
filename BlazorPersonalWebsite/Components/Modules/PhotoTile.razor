@@ -1,11 +1,11 @@
 <div>
-    <a href="@(Src)" class="bg-slate-100 shadow-sm aspect-square flex items-center justify-center p-[7.5%]
+    <a href="@(Src)" class="bg-slate-100 shadow-md aspect-square flex items-center justify-center p-[7.5%]
                             transition-all duration-75 ease-in-out hover:p-[5%]">
         <img src="@(Src)" class="max-h-full" alt="@(Alt)">
     </a>
-    <p class="text-center mt-1">
-        <Subtle>@(Caption)</Subtle>
-    </p>
+    @* <p class="text-center mt-1"> *@
+    @*     <Subtle>@(Caption)</Subtle> *@
+    @* </p> *@
 </div>
 
 @code {
@@ -17,6 +17,6 @@
     
     [Parameter] public string Src { get; set; } = "/";
     [Parameter] public string Alt { get; set; } = "";
-    [Parameter] public string Caption { get; set; } = "";
+    // [Parameter] public string Caption { get; set; } = "";
     [Parameter] public AspectRatioEnum AspectRatio { get; set; } = AspectRatioEnum.Horizontal3x2;
 }
