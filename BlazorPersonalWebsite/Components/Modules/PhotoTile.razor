@@ -1,6 +1,6 @@
-<div>
-    <a href="@(Src)" class="bg-slate-100 shadow-md aspect-square flex items-center justify-center p-[7.5%]
-                            transition-all duration-75 ease-in-out hover:p-[5%]">
+<div style="transform: rotate(@(Rotation)deg)">
+    <a href="@(Src)" class="bg-slate-100 ring-slate-200 ring-1 shadow-lg aspect-square flex items-center justify-center
+                            p-[7.5%] transition-all duration-75 ease-in-out hover:p-[5%]">
         <img src="@(Src)" class="max-h-full" alt="@(Alt)">
     </a>
     @* <p class="text-center mt-1"> *@
@@ -18,5 +18,33 @@
     [Parameter] public string Src { get; set; } = "/";
     [Parameter] public string Alt { get; set; } = "";
     // [Parameter] public string Caption { get; set; } = "";
+    [Parameter] public float Rotation { get; set; } = 0;
     [Parameter] public AspectRatioEnum AspectRatio { get; set; } = AspectRatioEnum.Horizontal3x2;
+    
+    // // Had issues safelisting the necessary tailwindcss classes for this. Thought the following would work but it
+    // // didn't: @source inline("{-,}-rotate-[{0..360..2.5}deg]"); Opting to just use style instead.
+    // private string _rotateClass = "rotate";
+    //
+    // private void CheckForNegativeRotation()
+    // {
+    //     if (Rotation >= 0)
+    //     {
+    //         return;
+    //     }
+    //     
+    //     _rotateClass = "-rotate";
+    //     Rotation = Math.Abs(Rotation);
+    // }
+    //
+    // // https://stackoverflow.com/a/61554592/24438534
+    // private Task StartupTask()
+    // {
+    //     return Task.CompletedTask;
+    // }
+    //
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     CheckForNegativeRotation();
+    //     await StartupTask();
+    // }
 }
