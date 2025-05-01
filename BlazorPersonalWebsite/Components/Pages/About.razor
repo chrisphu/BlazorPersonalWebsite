@@ -1,141 +1,143 @@
 @page "/about"
+@using BlazorPersonalWebsite.Components.Modules.StandardAssets
+@using BlazorPersonalWebsite.Components.Modules.Tiles
 
 <PageTitle>About me</PageTitle>
 
-<StandardHeading1>
+<Heading1>
     About me
-</StandardHeading1>
+</Heading1>
 
-<StandardParagraph>
+<Paragraph>
     Hi! My name is Chris and I am a mechanical engineer. In my free time, I enjoy programming games, CAD modeling,
     3D printing, and playing video games/board games.
-</StandardParagraph>
+</Paragraph>
 
-<StandardHeading2>
+<Heading2>
     Socials
-</StandardHeading2>
+</Heading2>
 
-<StandardParagraph>
+<Paragraph>
     I have awful online presence. But I'm trying to get better!
-</StandardParagraph>
+</Paragraph>
 
 <Spacer />
 
-<StandardParagraph>
-    <StandardTileGrid>
-        <CustomImageTileButton Image="/images/instagram-gradient-glyph.png"
-                                       AltText="Instagram gradient glyph."
-                                       Title="Instagram"
-                                       Body="Mostly photography."
-                                       Url="https://www.instagram.com/chrisnguyenphu">
+<Paragraph>
+    <TileGrid>
+        <TileWithCustomImage ImgSrc="/images/instagram-gradient-glyph.png"
+                               ImgAlt="Instagram gradient glyph."
+                               Title="Instagram"
+                               Body="Mostly photography."
+                               Href="https://www.instagram.com/chrisnguyenphu">
             <TileButtonLabel Content="instagram.com" />
-        </CustomImageTileButton>
+        </TileWithCustomImage>
         
-        <CustomImageTileButton Image="/images/github-mark.svg"
-                                       AltText="GitHub Invertocat mark."
-                                       Title="GitHub"
-                                       Body="My projects and scripts."
-                                       Url="https://github.com/chrisphu">
+        <TileWithCustomImage ImgSrc="/images/github-mark.svg"
+                               ImgAlt="GitHub Invertocat mark."
+                               Title="GitHub"
+                               Body="My projects and scripts."
+                               Href="https://github.com/chrisphu">
             <TileButtonLabel Content="github.com" />
-        </CustomImageTileButton>
+        </TileWithCustomImage>
         
-        <CustomImageTileButton Image="/images/printables-logo-no-text.png"
-                                       AltText="Part of Printables logo."
-                                       Title="Printables"
-                                       Body="My models for 3D printing."
-                                       Url=@("https://www.printables.com/@Chris_367665")>
+        <TileWithCustomImage ImgSrc="/images/printables-logo-no-text.png"
+                               ImgAlt="Part of Printables logo."
+                               Title="Printables"
+                               Body="My models for 3D printing."
+                               Href=@("https://www.printables.com/@Chris_367665")>
             <TileButtonLabel Content="printables.com" />
-        </CustomImageTileButton>
+        </TileWithCustomImage>
         
-        <CustomImageTileButton Image="/images/linkedin-in-blue-mark.png"
-                                       AltText="Blue 'in' LinkedIn mark."
-                                       Title="LinkedIn"
-                                       Body="Career details."
-                                       Url="https://www.linkedin.com/in/chrisnguyenphu">
+        <TileWithCustomImage ImgSrc="/images/linkedin-in-blue-mark.png"
+                               ImgAlt="Blue 'in' LinkedIn mark."
+                               Title="LinkedIn"
+                               Body="Career details."
+                               Href="https://www.linkedin.com/in/chrisnguyenphu">
             <TileButtonLabel Content="linkedin.com" />
-        </CustomImageTileButton>
-    </StandardTileGrid>
-</StandardParagraph>
+        </TileWithCustomImage>
+    </TileGrid>
+</Paragraph>
 
-<StandardHeading2>
+<Heading2>
     Attributions
-</StandardHeading2>
+</Heading2>
 
-<StandardParagraph>
+<Paragraph>
     The following resources helped make this website possible!
-</StandardParagraph>
+</Paragraph>
 
-<StandardParagraph>
+<Paragraph>
     <ListItem>
         <ListItemBullet />
         <ListItemContent>
             <b>
-                <StandardLink LinkText="Blazor"
-                              URL="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor" />
+                <Link LinkText="Blazor (ASP.NET Core)"
+                              Href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor" />
             </b>
             – Web framework.
-            <StandardLink LinkText="MIT License"
-                          URL="https://github.com/dotnet/aspnetcore/blob/main/LICENSE.txt" />.
+            <Link LinkText="MIT License"
+                          Href="https://github.com/dotnet/aspnetcore/blob/bce4dd5ff65a4d2089c3e20761ba34f3f403ef37/LICENSE.txt" />.
         </ListItemContent>
     </ListItem>
     <ListItem>
         <ListItemBullet />
         <ListItemContent>
             <b>
-                <StandardLink LinkText="Azure Static Web Apps"
-                              URL="https://azure.microsoft.com/en-us/products/app-service/static" />
+                <Link LinkText="Azure Static Web Apps"
+                              Href="https://azure.microsoft.com/en-us/products/app-service/static" />
             </b>
             – Static web apps hosting.
-            <StandardLink LinkText="Free service"
-                          URL="https://azure.microsoft.com/en-us/pricing/free-services" />.
+            <Link LinkText="Free service"
+                          Href="https://azure.microsoft.com/en-us/pricing/free-services" />.
         </ListItemContent>
     </ListItem>
     <ListItem>
         <ListItemBullet />
         <ListItemContent>
             <b>
-                <StandardLink LinkText="Tailwind CSS"
-                              URL="https://tailwindcss.com" />
+                <Link LinkText="Tailwind CSS"
+                              Href="https://tailwindcss.com" />
             </b>
             – CSS framework.
-            <StandardLink LinkText="MIT License"
-                          URL="https://github.com/tailwindlabs/tailwindcss/blob/next/LICENSE" />.
+            <Link LinkText="MIT License"
+                          Href="https://github.com/tailwindlabs/tailwindcss/blob/45cd32eed7d328bd14caa9895077f5df441a6da7/LICENSE" />.
         </ListItemContent>
     </ListItem>
     <ListItem>
         <ListItemBullet />
         <ListItemContent>
             <b>
-                <StandardLink LinkText="JetBrains Rider"
-                              URL="https://www.jetbrains.com/rider/" />
+                <Link LinkText="JetBrains Rider"
+                              Href="https://www.jetbrains.com/rider/" />
             </b>
-            – IDE.
-            <StandardLink LinkText="Personal license"
-                          URL="https://sales.jetbrains.com/hc/en-gb/articles/207241075-What-is-the-difference-between-commercial-and-personal-licenses" />.
+            – .NET IDE of choice.
+            <Link LinkText="Purchased personal license"
+                          Href="https://sales.jetbrains.com/hc/en-gb/articles/207241075-What-is-the-difference-between-commercial-and-personal-licenses" />.
         </ListItemContent>
     </ListItem>
     <ListItem>
         <ListItemBullet />
         <ListItemContent>
             <b>
-                <StandardLink LinkText="Inter"
-                              URL="https://fonts.google.com/specimen/Inter" />
+                <Link LinkText="Inter"
+                              Href="https://github.com/rsms/inter" />
             </b>
             – Sans serif font.
-            <StandardLink LinkText="Open Font License"
-                          URL="https://fonts.google.com/specimen/Inter/about" />.
+            <Link LinkText="SIL Open Font License 1.1"
+                          Href="https://github.com/rsms/inter/blob/353b61b9f4430d5f420d56605a6e7993e0941470/LICENSE.txt" />.
         </ListItemContent>
     </ListItem>
     <ListItem>
         <ListItemBullet />
         <ListItemContent>
             <b>
-                <StandardLink LinkText="JetBrains Mono"
-                              URL="https://www.jetbrains.com/lp/mono" />
+                <Link LinkText="JetBrains Mono"
+                              Href="https://github.com/JetBrains/JetBrainsMono/tree/master" />
             </b>
             – Sans serif monospace font.
-            <StandardLink LinkText="Open Font License"
-                          URL="https://www.jetbrains.com/lp/mono/#license" />.
+            <Link LinkText="SIL Open Font License 1.1"
+                          Href="https://github.com/JetBrains/JetBrainsMono/blob/19371302b95d218af43299bce79ddbddd0bc364d/OFL.txt" />.
         </ListItemContent>
     </ListItem>
-</StandardParagraph>
+</Paragraph>

@@ -1,25 +1,23 @@
-<div style="transform: rotate(@(Rotation)deg)">
-    <a href="@(Src)" class="bg-slate-100 ring-slate-200 ring-1 shadow-lg aspect-square flex items-center justify-center
-                            p-[7.5%] transition-all duration-75 ease-in-out hover:p-[5%]">
-        <img src="@(Src)" class="max-h-full" alt="@(Alt)">
-    </a>
+<div class="aspect-square" style="transform: rotate(@(Rotation)deg)">
+    <PhotoButton Src="@(Src)"
+                 Alt="@(Alt)"
+                 OnClick="@(OnClick)" />
     @* <p class="text-center mt-1"> *@
-    @*     <Subtle>@(Caption)</Subtle> *@
+    @*     <SubtleText>@(Caption)</SubtleText> *@
     @* </p> *@
 </div>
 
 @code {
-    public enum AspectRatioEnum
-    {
-        Horizontal3x2,
-        Vertical3x2
-    }
-    
     [Parameter] public string Src { get; set; } = "/";
     [Parameter] public string Alt { get; set; } = "";
     // [Parameter] public string Caption { get; set; } = "";
     [Parameter] public float Rotation { get; set; } = 0;
-    [Parameter] public AspectRatioEnum AspectRatio { get; set; } = AspectRatioEnum.Horizontal3x2;
+    [Parameter] public EventCallback<string> OnClick { get; set; }
+    
+    private Task OnClickTask(MouseEventArgs e)
+    {
+        return OnClick.InvokeAsync(Src);
+    }
     
     // // Had issues safelisting the necessary tailwindcss classes for this. Thought the following would work but it
     // // didn't: @source inline("{-,}-rotate-[{0..360..2.5}deg]"); Opting to just use style instead.

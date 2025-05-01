@@ -1,11 +1,11 @@
 <span class="inline-block transition-transform duration-100 ease-in-out hover:-translate-y-0.5">
-    <a href=@(URL) class="@(Underline ? "underline" : "no-underline")">
+    <a href=@(Href) class="@(Underline ? "underline" : "no-underline")">
         @(LinkText)
     </a>
 </span>
 
 @code {
     [Parameter] public string LinkText { get; set; } = string.Empty;
-    [Parameter] public string URL { get; set; } = string.Empty;
+    [Parameter] public string Href { get; set; } = string.Empty;
     [Parameter] public bool Underline { get; set; } = true;
 }

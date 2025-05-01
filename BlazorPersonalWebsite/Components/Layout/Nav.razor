@@ -1,5 +1,7 @@
-﻿<nav class="my-1 text-base tracking-normal">
-    <StandardLink LinkText="Home" URL="/" Underline="true" />
+﻿@using BlazorPersonalWebsite.Components.Modules.StandardAssets
+
+<nav class="my-1 text-base tracking-normal">
+    <Link LinkText="Home" Href="/" Underline="true" />
     <span class="select-none">&ensp;/&ensp;</span>
-    <StandardLink LinkText="About" URL="/about" Underline="true" />
+    <Link LinkText="About" Href="/about" Underline="true" />
 </nav>

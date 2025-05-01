@@ -1,57 +1,68 @@
 @page "/photography"
+@using BlazorPersonalWebsite.Components.Modules.Decorations
+@using BlazorPersonalWebsite.Components.Modules.Interactives
+@using BlazorPersonalWebsite.Components.Modules.Photos
+@inherits BlazorPersonalWebsite.Components.Modules.Photos.PhotoViewingController
+@using BlazorPersonalWebsite.Components.Modules.StandardAssets
 
 <PageTitle>Photography</PageTitle>
 
-<StandardHeading1>
+<Heading1>
     Photography
-</StandardHeading1>
+</Heading1>
 
-<StandardParagraph>
+<Paragraph>
     I started getting into photography in late September 2024. Although maybe not exactly an advisable first camera body
     for a beginner, I had opted to buy a used 
-    <StandardLink LinkText="SIGMA sd Quattro"
-                  URL="https://www.sigmaphoto.com/sd-quattro-camera" />
+    <Link LinkText="SIGMA sd Quattro"
+                  Href="https://www.sigmaphoto.com/sd-quattro-camera" />
     (and a 
-    <StandardLink LinkText="SIGMA SA-7N"
-                  URL="https://www.sigma-global.com/en/cameras/sa-7n/" />
+    <Link LinkText="SIGMA SA-7N"
+                  Href="https://www.sigma-global.com/en/cameras/sa-7n/" />
     shortly after).
-</StandardParagraph>
+</Paragraph>
 
-<StandardParagraph>
+<Paragraph>
     For convenience, most of my photos are still being hosted on
-    <StandardLink LinkText="Instagram"
-                  URL="https://www.instagram.com/chrisnguyenphu" />.
+    <Link LinkText="Instagram"
+                  Href="https://www.instagram.com/chrisnguyenphu" />.
     I'll work out a workflow for hosting them here as well at some point!
-</StandardParagraph>
+</Paragraph>
 
-<StandardHeading2>
+<Heading2>
     Photos
-</StandardHeading2>
+</Heading2>
 
 <Banner>
     This area is under construction! There won't be a whole lot of photos on here for awhile. Consider checking out my
-    <StandardLink LinkText="Instagram"
-                  URL="https://www.instagram.com/chrisnguyenphu" />
+    <Link LinkText="Instagram"
+                  Href="https://www.instagram.com/chrisnguyenphu" />
     in the meantime!
 </Banner>
 
 <Spacer />
 
-<StandardParagraph>
+<Paragraph>
     <PhotoTileGrid>
         <PhotoTile Src="https://pub-af39139e09a9480797efc5f6cea8af28.r2.dev/SDIM2555.tif-grain-1440p.png"
-                   AspectRatio="PhotoTile.AspectRatioEnum.Horizontal3x2"
-                   Rotation="(float)-2.5" />
+                   Rotation="(float)-2.5"
+                   OnClick="@(ShowPhotoView)" />
         <PhotoTile Src="https://pub-af39139e09a9480797efc5f6cea8af28.r2.dev/SDIM4769.tif-grain-1440p.png"
-                   AspectRatio="PhotoTile.AspectRatioEnum.Vertical3x2"
-                   Rotation="5" />
+                   Rotation="5"
+                   OnClick="@(ShowPhotoView)" />
     </PhotoTileGrid>
-</StandardParagraph>
+</Paragraph>
 
-<StandardHeading2>
+<PhotoViewShade PhotoViewDisplay="@(PhotoViewDisplay)"
+                OnClick="@(HidePhotoView)" />
+
+<PhotoView PhotoViewDisplay="@(PhotoViewDisplay)"
+           Src="@(PhotoSrc)" />
+
+<Heading2>
     Why add emulated film grain to digital photos?
-</StandardHeading2>
+</Heading2>
 
-<StandardParagraph>
+<Paragraph>
     Because I like how it looks. (-:
-</StandardParagraph>
+</Paragraph>

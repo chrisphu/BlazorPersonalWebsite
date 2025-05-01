@@ -1,0 +1,14 @@
+<button class="py-0.5 px-2 rounded-md bg-purple-500 text-white hover:bg-purple-400 active:bg-purple-600"
+        @onclick="@(OnClickTask)">
+    @(Text)
+</button>
+
+@code {
+    [Parameter] public string Text { get; set; } = "";
+    [Parameter] public EventCallback OnClick { get; set; }
+    
+    private Task OnClickTask(MouseEventArgs e)
+    {
+        return OnClick.InvokeAsync();
+    }
+}

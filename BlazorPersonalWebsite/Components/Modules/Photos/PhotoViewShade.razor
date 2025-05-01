@@ -1,0 +1,14 @@
+<div class="@(PhotoViewDisplay ? "" : "hidden") fixed top-0 right-0 left-0 bottom-0 backdrop-blur-sm"
+     @onclick="@(OnClickTask)">
+    <div class="w-full h-full bg-black opacity-80"></div>
+</div>
+
+@code {
+    [Parameter] public bool PhotoViewDisplay { get; set; }
+    [Parameter] public EventCallback OnClick { get; set; }
+    
+    private Task OnClickTask(MouseEventArgs e)
+    {
+        return OnClick.InvokeAsync();
+    }
+}

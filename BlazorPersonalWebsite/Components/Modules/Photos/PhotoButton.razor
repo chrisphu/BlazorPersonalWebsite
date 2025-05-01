@@ -1,0 +1,16 @@
+<button class="w-full h-full bg-slate-100 ring-slate-200 ring-1 shadow-lg flex items-center justify-center
+               cursor-pointer p-[7.5%] transition-all duration-75 ease-in-out hover:p-[5%]"
+        @onclick="@(OnClickTask)">
+    <img class="w-full h-full object-contain" src="@(Src)" alt="@(Alt)">
+</button>
+
+@code {
+    [Parameter] public string Src { get; set; } = "";
+    [Parameter] public string Alt { get; set; } = "";
+    [Parameter] public EventCallback<string> OnClick { get; set; }
+    
+    private Task OnClickTask(MouseEventArgs e)
+    {
+        return OnClick.InvokeAsync(Src);
+    }
+}

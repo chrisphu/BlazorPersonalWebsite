@@ -1,106 +1,111 @@
 ﻿@page "/"
+@using BlazorPersonalWebsite.Components.Modules.Decorations
+@using BlazorPersonalWebsite.Components.Modules.StandardAssets
+@using BlazorPersonalWebsite.Components.Modules.Tiles
 
-<PageTitle>Home</PageTitle>
-
-<StandardHeading1>
+<PageTitle>
     Home
-</StandardHeading1>
+</PageTitle>
 
-<Caption>
+<Heading1>
+    Home
+</Heading1>
+
+<UnderHeadingSubtleText>
     Last updated 29 April 2025
-</Caption>
+</UnderHeadingSubtleText>
 
-<StandardParagraph>
+<Paragraph>
     Welcome to my website! I document and write about my projects and interests here from time to time.
-</StandardParagraph>
+</Paragraph>
 
-<StandardHeading2>
+<Heading2>
     Me
-</StandardHeading2>
+</Heading2>
 
-<StandardParagraph>
-    <StandardTileGrid>
-        <StandardTile TitlePrefix="🙋‍♂️"
+<Paragraph>
+    <TileGrid>
+        <Tile TitlePrefix="🙋‍♂️"
                       Title="About"
                       Body="About me and this website!"
-                      Url="/about" />
-        <SubtleTileButton TitlePrefix="📄️"
+                      Href="/about" />
+        <SubtleTile TitlePrefix="📄️"
                           Title="Resume"
                           Body="Work in progress!"
-                          Url="/" />
-    </StandardTileGrid>
-</StandardParagraph>
+                          Href="/" />
+    </TileGrid>
+</Paragraph>
 
-<StandardHeading2>
+<Heading2>
     Things I've made
-</StandardHeading2>
+</Heading2>
 
-<StandardParagraph>
-    <StandardTileGrid>
-        <StandardTile TitlePrefix="🖥️"
+<Paragraph>
+    <TileGrid>
+        <Tile TitlePrefix="🖥️"
                       Title="Website"
                       Body="Public repo for this Blazor website."
-                      Url="https://github.com/chrisphu/BlazorPersonalWebsite">
+                      Href="https://github.com/chrisphu/BlazorPersonalWebsite">
             <TileButtonLabel Content="github.com" />
             <TileButtonLabel Color="violet"
                              Content="code" />
-        </StandardTile>
+        </Tile>
 
-        <StandardTile TitlePrefix="📸"
+        <Tile TitlePrefix="📸"
                       Title="Photography"
                       Body="My favorite photos I've taken."
-                      Url="/photography">
+                      Href="/photography">
             <TileButtonLabel Color="orange"
                              Content="art" />
-        </StandardTile>
+        </Tile>
         
-        <StandardTile TitlePrefix="♟️"
+        <Tile TitlePrefix="♟️"
                       Title="Modern chess pieces"
                       Body="3D models of low poly chess pieces."
-                      Url="https://www.printables.com/model/276528-modern-chess-pieces">
+                      Href="https://www.printables.com/model/276528-modern-chess-pieces">
             <TileButtonLabel Content="printables.com" />
             <TileButtonLabel Color="blue"
                              Content="design" />
-        </StandardTile>
+        </Tile>
         
-        <StandardTile TitlePrefix="📂"
+        <Tile TitlePrefix="📂"
                       Title="kebab-case renamer"
                       Body="Rename files/directories to kebab-case."
-                      Url="https://github.com/chrisphu/kebab-case-renamer">
+                      Href="https://github.com/chrisphu/kebab-case-renamer">
             <TileButtonLabel Content="github.com" />
             <TileButtonLabel Color="violet"
                              Content="code" />
-        </StandardTile>
+        </Tile>
         
-        <SubtleTileButton TitlePrefix="📦"
+        <SubtleTile TitlePrefix="📦"
                           Title="Full list"
                           Body="Work in progress!"
-                          Url="/" />
-    </StandardTileGrid>
-</StandardParagraph>
+                          Href="/" />
+    </TileGrid>
+</Paragraph>
 
-<StandardHeading2>
+<Heading2>
     Fun stuff
-</StandardHeading2>
+</Heading2>
 
-<StandardTileGrid>
-    <CustomImageTileButton Image="/images/puzzmo-logo-no-text.png"
-                                   AltText="Part of Puzzmo logo."
+<TileGrid>
+    <TileWithCustomImage ImgSrc="/images/puzzmo-logo-no-text.png"
+                                   ImgAlt="Part of Puzzmo logo."
                                    Title="Puzzmo stats"
                                    Body="Mostly crosswording!"
-                                   Url="https://www.puzzmo.com/user/hi/chris">
+                                   Href="https://www.puzzmo.com/user/hi/chris">
         <TileButtonLabel Content="puzzmo.com"/>
         <TileButtonLabel Color="yellow"
                          Content="fun!" />
-    </CustomImageTileButton>
+    </TileWithCustomImage>
 
-    <CustomImageTileButton Image="/images/jingle-rs-favicon.png"
-                                   AltText="Jingle RS favicon."
+    <TileWithCustomImage ImgSrc="/images/jingle-rs-favicon.png"
+                                   ImgAlt="Jingle RS favicon."
                                    Title="Jingle RS"
                                    Body="My absolute favorite -dle."
-                                   Url="https://jingle.rs">
+                                   Href="https://jingle.rs">
         <TileButtonLabel Content="jingle.rs"/>
         <TileButtonLabel Color="yellow"
                          Content="fun!" />
-    </CustomImageTileButton>
-</StandardTileGrid>
+    </TileWithCustomImage>
+</TileGrid>

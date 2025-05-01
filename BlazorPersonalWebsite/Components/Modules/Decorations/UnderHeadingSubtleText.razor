@@ -1,8 +1,7 @@
-<p class="-mt-2 mb-4">
-    <Subtle>
-        @(ChildContent)
-    </Subtle>
+<p class="text-sm italic tracking-tight -mt-2 mb-4">
+    @(ChildContent)
 </p>
+
 
 @code {
     [Parameter] public RenderFragment? ChildContent { get; set; }
