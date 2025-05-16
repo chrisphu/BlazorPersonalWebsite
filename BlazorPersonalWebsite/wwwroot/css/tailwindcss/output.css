@@ -441,6 +441,9 @@
   .self-center {
     align-self: center;
   }
+  .rounded-\[0\.75rem\] {
+    border-radius: 0.75rem;
+  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
@@ -449,9 +452,6 @@
   }
   .rounded-md {
     border-radius: var(--radius-md);
-  }
-  .rounded-xl {
-    border-radius: var(--radius-xl);
   }
   .rounded-r-md {
     border-top-right-radius: var(--radius-md);

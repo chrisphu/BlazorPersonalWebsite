@@ -56,9 +56,6 @@ tell, the latter works and the former doesn't so...
 }
 
 @theme {
-    /* Theme variables https://tailwindcss.com/docs/theme */
-    --radius-xl: 0.75rem;
-    
     /* Appearance */
     --background-color: var(--color-slate-200);
     
