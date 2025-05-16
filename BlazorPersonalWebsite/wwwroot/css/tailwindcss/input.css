@@ -9,17 +9,11 @@ TODO: Read more at https://tailwindcss.com/blog/tailwindcss-v4#css-first-configu
  */
 
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* Safelisting https://tailwindcss.com/blog/tailwindcss-v4#css-first-configuration */
 @source inline("bg-{slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,cyan,sky,blue,indigo,violet,purple,fuchsia,pink,rose}-200");
 @source inline("text-{slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,cyan,sky,blue,indigo,violet,purple,fuchsia,pink,rose}-500");
 @source inline("my-{0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,7,8,9,10}");
-
-/* For some reason this doesn't seem to be compiled without being explicitly called out. */
-@source inline("rounded-xl");
 
 /* Fonts */
 /*
@@ -62,6 +56,9 @@ tell, the latter works and the former doesn't so...
 }
 
 @theme {
+    /* Theme variables https://tailwindcss.com/docs/theme */
+    --radius-xl: 0.75rem;
+    
     /* Appearance */
     --background-color: var(--color-slate-200);
     
