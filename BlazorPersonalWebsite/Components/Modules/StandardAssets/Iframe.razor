@@ -1,0 +1,14 @@
+@using BlazorPersonalWebsite.Components.Modules.Interactives
+
+<iframe src="@(IframeSrc)" class="aspect-square w-full h-auto mt-6 rounded-xl shadow"></iframe>
+<div class="relative w-full h-0 mb-6 flex justify-end items-center">
+    <IframeLinkButton Href="@(ButtonHref)"
+                      Text="@(ButtonText)"
+                      ShowOpenInNewIcon="true" />
+</div>
+
+@code {
+    [Parameter] public string IframeSrc { get; set; } = "";
+    [Parameter] public string ButtonHref { get; set; } = "/";
+    [Parameter] public string ButtonText { get; set; } = "";
+}

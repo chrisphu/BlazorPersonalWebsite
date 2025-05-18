@@ -30,7 +30,8 @@
                                Title="Instagram"
                                Body="Mostly photography."
                                Href="https://www.instagram.com/chrisnguyenphu">
-            <TileLabel Content="instagram.com" />
+            <TileLabel Content="instagram.com"
+                       ShowOpenInNewIcon="true" />
         </TileWithCustomImage>
         
         <TileWithCustomImage ImgSrc="/images/github-mark.svg"
@@ -38,7 +39,8 @@
                                Title="GitHub"
                                Body="My projects and scripts."
                                Href="https://github.com/chrisphu">
-            <TileLabel Content="github.com" />
+            <TileLabel Content="github.com"
+                       ShowOpenInNewIcon="true" />
         </TileWithCustomImage>
         
         <TileWithCustomImage ImgSrc="/images/printables-logo-no-text.png"
@@ -46,7 +48,8 @@
                                Title="Printables"
                                Body="My models for 3D printing."
                                Href=@("https://www.printables.com/@Chris_367665")>
-            <TileLabel Content="printables.com" />
+            <TileLabel Content="printables.com"
+                       ShowOpenInNewIcon="true" />
         </TileWithCustomImage>
         
         <TileWithCustomImage ImgSrc="/images/linkedin-in-blue-mark.png"
@@ -54,7 +57,8 @@
                                Title="LinkedIn"
                                Body="Career details."
                                Href="https://www.linkedin.com/in/chrisnguyenphu">
-            <TileLabel Content="linkedin.com" />
+            <TileLabel Content="linkedin.com"
+                       ShowOpenInNewIcon="true" />
         </TileWithCustomImage>
     </TileGrid>
 </Paragraph>
@@ -133,11 +137,23 @@
         <ListItemContent>
             <b>
                 <Link LinkText="JetBrains Mono"
-                              Href="https://github.com/JetBrains/JetBrainsMono/tree/master" />
+                      Href="https://github.com/JetBrains/JetBrainsMono/tree/master" />
             </b>
             – Sans serif monospace font.
             <Link LinkText="SIL Open Font License 1.1"
-                          Href="https://github.com/JetBrains/JetBrainsMono/blob/19371302b95d218af43299bce79ddbddd0bc364d/OFL.txt" />.
+                  Href="https://github.com/JetBrains/JetBrainsMono/blob/19371302b95d218af43299bce79ddbddd0bc364d/OFL.txt" />.
+        </ListItemContent>
+    </ListItem>
+    <ListItem>
+        <ListItemBullet />
+        <ListItemContent>
+            <b>
+                <Link LinkText="Material Design Icons"
+                      Href="https://github.com/google/material-design-icons/tree/master" />
+            </b>
+            – Web icons.
+            <Link LinkText="Apache License 2.0"
+                  Href="https://github.com/google/material-design-icons/blob/941fa95d7f6084a599a54ca71bc565f48e7c6d9e/LICENSE" />.
         </ListItemContent>
     </ListItem>
 </Paragraph>
