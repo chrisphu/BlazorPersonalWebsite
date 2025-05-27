@@ -1,7 +1,8 @@
-<div class="aspect-square" style="transform: rotate(@(Rotation)deg)">
+<div class="aspect-square w-full h-full flex items-center justify-center" style="transform: rotate(@(Rotation)deg)">
     <PhotoButton Src="@(Src)"
+                 AspectRatio="@(AspectRatio)"
                  Alt="@(Alt)"
-                 OnClick="@(OnClick)" />
+                 OnClick="@(OnClick)"/>
     @* <p class="text-center mt-1"> *@
     @*     <SubtleText>@(Caption)</SubtleText> *@
     @* </p> *@
@@ -9,6 +10,7 @@
 
 @code {
     [Parameter] public string Src { get; set; } = "/";
+    [Parameter] public string AspectRatio { get; set; } = "1/1";
     [Parameter] public string Alt { get; set; } = "";
     // [Parameter] public string Caption { get; set; } = "";
     [Parameter] public float Rotation { get; set; } = 0;

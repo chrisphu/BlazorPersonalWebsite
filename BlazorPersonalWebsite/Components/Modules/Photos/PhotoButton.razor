@@ -1,16 +1,38 @@
-<button class="w-full h-full bg-slate-100 ring-slate-200 ring-1 shadow-lg flex items-center justify-center
-               cursor-pointer p-[7.5%] transition-all duration-75 ease-in-out hover:p-[5%]"
+<button class="aspect-@(AspectRatio) @(SetButtonFullWidthOrHeight())
+               bg-slate-100 ring-slate-200 shadow-sm flex items-center justify-center cursor-pointer
+               transition-all duration-75 ease-in-out hover:z-10 hover:scale-105 hover:shadow-md"
         @onclick="@(OnClickTask)">
-    <img class="w-full h-full object-contain" src="@(Src)" alt="@(Alt)">
+    <img class="@(SetImageWidthAndHeight()) object-contain" src="@(Src)" alt="@(Alt)">
 </button>
 
 @code {
     [Parameter] public string Src { get; set; } = "";
+    [Parameter] public string AspectRatio { get; set; } = "1/1";
     [Parameter] public string Alt { get; set; } = "";
     [Parameter] public EventCallback<string> OnClick { get; set; }
     
     private Task OnClickTask(MouseEventArgs e)
     {
         return OnClick.InvokeAsync(Src);
+    }
+    
+    private int[] FractionStringToIntegers(string input)
+    {
+        var fractionParts = input.Split('/');
+        return [int.Parse(fractionParts[0]), int.Parse(fractionParts[1])];
+    }
+    
+    private string SetButtonFullWidthOrHeight()
+    {
+        var fractionParts = FractionStringToIntegers(AspectRatio);
+        return (fractionParts[0] >= fractionParts[1]) ? "w-full" : "h-full";
+    }
+    
+    // Safelist common aspect ratios and their "1 reduced" versions in input.css.
+    private string SetImageWidthAndHeight()
+    {
+        var fractionParts = FractionStringToIntegers(AspectRatio);
+        return "w-" + (fractionParts[0] - 1).ToString() + "/" + fractionParts[0].ToString() + " h-"
+               + (fractionParts[1] - 1).ToString() + "/" + fractionParts[1].ToString();
     }
 }
