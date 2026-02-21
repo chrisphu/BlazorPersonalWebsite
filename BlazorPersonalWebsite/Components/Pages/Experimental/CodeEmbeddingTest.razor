@@ -1,0 +1,59 @@
+@page "/experimental/code-embedding-test"
+@using BlazorPersonalWebsite.Components.Modules.StandardAssets
+@using BlazorPersonalWebsite.Components.Modules.GitHubGists
+
+<PageTitle>Code embedding test</PageTitle>
+
+<Heading1>
+    Code embedding test
+</Heading1>
+
+<Heading2>
+    GitHub gists
+</Heading2>
+
+<Paragraph>
+    Requires
+    <Link Href="https://github.com/dotnet/aspnetcore/issues/39557#issuecomment-1015020324"
+          LinkText="fingers10's Blazor component" />
+    to function. Not ideal but works still as of 27 May 2025.
+</Paragraph>
+
+<GithubGistSnippet Title="DeSerialization"
+                   UserId="fingers10"
+                   FileName="44eb8a5a5427b472d1c48ecb1b4268f7" />
+
+<Heading2>
+    thiscodeWorks embeds
+</Heading2>
+
+<Paragraph>
+    No workarounds needed for this method but they're substantially less well-known.
+</Paragraph>
+
+<iframe src="https://www.thiscodeworks.com/embed/5e1a307a7d441dabcc69e588"
+        style="width: 100%; height: 385px;"
+        frameborder="0"
+        data-ruffle-polyfilled=""></iframe>
+
+<Heading2>
+    Just making a Blazor component
+</Heading2>
+
+<Paragraph>
+    I don't really want to do this long-term since I'd have to write some sort of parser to automate syntax highlight.
+</Paragraph>
+
+<div class="bg-slate-800 text-white px-4 py-0.5 rounded-md">
+    <Paragraph>
+        <MonospaceBlock>
+public static class Program()<br/>
+{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;public static void Main()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("hello, world!");<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+}
+        </MonospaceBlock>
+    </Paragraph>
+</div>

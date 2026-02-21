@@ -1,9 +1,14 @@
 # Blazor personal website
 
-This is the static [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) web app that serves as my website at https://www.chrisphu.com. It utilizes [Tailwind CSS](https://tailwindcss.com).
+> [!warning]
+> I created a new single page app as my personal website using a React + TypeScript + Vite template from Webstorm. That new repo is not currently public.
+
+This is a static [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) web app that serves as my website at https://www.chrisphu.com. It utilizes [Tailwind CSS](https://tailwindcss.com).
 
 ## Notes
 
+- On 20 February 2026, I completed moving all content from this app over to a new React + TypeScript + Vite single page app. This move was motivated by Blazor unfortunately being quite slow. Attempting to load my Blazor web app while on mobile data took just long enough that visitors might assume the URL doesn't actually lead anywhere.
+- On 29 April 2025, I started a new Blazor WebAssembly app from template because of the issues below. I migrated all the content over and it seems to be working fine now. Downside is that the template ([Blazor's own quick start](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create)) starts on .NET 7.0. A few miserable trial-and-error upgrades/downgrades later and I resolved just to stick with .NET 7.0 for now. I'll have to revisit this in the future.
 - On 28 April 2025, I started updating my website again after having not done so for about six months. Although the build preview worked fine, the app had a new error (below) when deployed. For anyone Googling issues in the future and stumbling across this note: sorry, I didn't figure out how to fix it. As far as I can tell, some package update broke something, but various trial-and-error upgrades/downgrades didn't resolve my issues.
 
 ```
@@ -20,5 +25,3 @@ blazor.webassembly.js:1 ManagedError: One or more errors occurred. (Could not lo
     at e.<computed> (dotnet.runtime.8.0.15.pdm8tx6jky.js:3:216288)
 callEntryPoint @ blazor.webassembly.js:1
 ```
-
-- On 29 April 2025, I started a new Blazor WebAssembly app from template because of the issues above. I migrated all the content over and it seems to be working fine now. Downside is that the template ([Blazor's own quick start](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create)) starts on .NET 7.0. A few miserable trial-and-error upgrades/downgrades later and I resolved just to stick with .NET 7.0 for now. I'll have to revisit this in the future.
